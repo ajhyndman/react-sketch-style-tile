@@ -1,0 +1,15 @@
+# gitignore
+coverage/
+.DS_Store
+*.log*
+node_modules
+lib
+react-example.sketchplugin
+_book
+.vscode
+.ts-compiled
+
+# only apps should have lockfiles
+yarn.lock
+package-lock.json
+npm-shrinkwrap.json
