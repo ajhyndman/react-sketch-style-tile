@@ -3,21 +3,28 @@ import { render } from 'react-sketchapp';
 
 import StyleTile from './StyleTile';
 
-const COLOR_LIST = {
-  Haus: '#F3F4F4',
-  Night: '#333',
-  Sur: '#96DBE4',
-  'Sur Dark': '#24828F',
-  Peach: '#EFADA0',
-};
+const COLOR_LIST = ['#F3F4F4', '#333', '#96DBE4', '#24828F', '#EFADA0'];
+
+const HEADINGS = [
+  {
+    fontFamily: 'Cinzel',
+    fontSize: 32,
+  },
+  {
+    fontFamily: 'Cinzel',
+    fontSize: 24,
+  },
+  {
+    fontFamily: 'Cinzel',
+    fontSize: 16,
+  },
+];
+
+const BODY_FONT = { fontFamily: 'American Typewriter', fontSize: 14 };
 
 export default () => {
   render(
-    <StyleTile
-      colors={COLOR_LIST}
-      headingFont="Cinzel"
-      bodyFont="American Typewriter"
-    />,
+    <StyleTile colors={COLOR_LIST} headings={HEADINGS} bodyFont={BODY_FONT} />,
     context.document.currentPage(),
   );
 };

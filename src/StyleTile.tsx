@@ -3,16 +3,21 @@ import { Artboard, View, Text } from 'react-sketchapp';
 
 import Swatch from './Swatch';
 
+type TextStyle = {
+  fontFamily: string;
+  fontSize: number;
+};
+
 interface StyleTileProps {
-  colors: { [key: string]: string };
-  headingFont: string;
-  bodyFont: string;
+  colors: string[];
+  headings: TextStyle[];
+  bodyFont: TextStyle;
 }
 
 const HEADING_LINE_HEIGHT = 1.2;
 const BODY_LINE_HEIGHT = 1.4;
 
-const StyleTile = ({ colors, headingFont, bodyFont }: StyleTileProps) => (
+const StyleTile = ({ colors, headings, bodyFont }: StyleTileProps) => (
   <Artboard
     name="StyleTile"
     style={{
@@ -22,39 +27,24 @@ const StyleTile = ({ colors, headingFont, bodyFont }: StyleTileProps) => (
       padding: 16,
     }}
   >
-    <View style={{ flexGrow: 1, flexShrink: 1, }}>
+    <View style={{ flexGrow: 1, flexShrink: 1 }}>
+      {headings.map((heading, i) => (
+        <Text
+          style={{
+            fontFamily: heading.fontFamily,
+            fontSize: heading.fontSize,
+            lineHeight: heading.fontSize * HEADING_LINE_HEIGHT,
+            marginBottom: heading.fontSize / 2,
+          }}
+        >
+          {`Heading ${i + 1}`}
+        </Text>
+      ))}
       <Text
         style={{
-          fontFamily: headingFont,
-          fontSize: 32,
-          lineHeight: 32 * HEADING_LINE_HEIGHT,
-        }}
-      >
-        Heading 1
-      </Text>
-      <Text
-        style={{
-          fontFamily: headingFont,
-          fontSize: 24,
-          lineHeight: 24 * HEADING_LINE_HEIGHT,
-        }}
-      >
-        Heading 2
-      </Text>
-      <Text
-        style={{
-          fontFamily: headingFont,
-          fontSize: 16,
-          lineHeight: 16 * HEADING_LINE_HEIGHT,
-        }}
-      >
-        Heading 3
-      </Text>
-      <Text
-        style={{
-          fontFamily: bodyFont,
-          fontSize: 14,
-          lineHeight: 14 * BODY_LINE_HEIGHT,
+          fontFamily: bodyFont.fontFamily,
+          fontSize: bodyFont.fontSize,
+          lineHeight: bodyFont.fontSize * BODY_LINE_HEIGHT,
         }}
       >
         Loomings call me because there by his guttural noises from thence. Call
@@ -66,8 +56,8 @@ const StyleTile = ({ colors, headingFont, bodyFont }: StyleTileProps) => (
     </View>
 
     <View style={{ flexDirection: 'column' }}>
-      {Object.keys(colors).map(color => (
-        <Swatch name={color} hex={colors[color]} key={color} />
+      {colors.map(color => (
+        <Swatch hex={color} key={color} />
       ))}
     </View>
   </Artboard>
