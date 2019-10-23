@@ -9,6 +9,9 @@ _book
 .vscode
 .ts-compiled
 
+# compiled sketch plugin
+*.sketchplugin
+
 # only apps should have lockfiles
 yarn.lock
 package-lock.json
