@@ -6,7 +6,8 @@ export const textColor = (hex: string) => {
   if (vsWhite > 4) {
     return '#FFF';
   }
-  return chroma(hex)
-    .darken(3)
-    .hex();
+  // return chroma(hex)
+  //   .darken(3)
+  //   .hex();
+  return '#222';
 };

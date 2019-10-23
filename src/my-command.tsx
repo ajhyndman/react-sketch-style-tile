@@ -20,11 +20,18 @@ const HEADINGS = [
   },
 ];
 
+const BACKGROUND = '#FFF';
+
 const BODY_FONT = { fontFamily: 'American Typewriter', fontSize: 14 };
 
 export default () => {
   render(
-    <StyleTile colors={COLOR_LIST} headings={HEADINGS} bodyFont={BODY_FONT} />,
+    <StyleTile
+      background={BACKGROUND}
+      colors={COLOR_LIST}
+      headings={HEADINGS}
+      bodyFont={BODY_FONT}
+    />,
     context.document.currentPage(),
   );
 };

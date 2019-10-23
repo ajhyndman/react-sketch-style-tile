@@ -1,8 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-sketchapp';
 
-// import { textColor } from './utils';
-
 interface SwatchProps {
   hex: string;
 }
