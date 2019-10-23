@@ -20,7 +20,7 @@ const HEADINGS = [
   },
 ];
 
-const BACKGROUND = '#FFF';
+const BACKGROUND = '#EEE';
 
 const BODY_FONT = { fontFamily: 'American Typewriter', fontSize: 14 };
 

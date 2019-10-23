@@ -70,7 +70,7 @@ const StyleTile = ({
 
       <View style={{ flexDirection: 'column' }}>
         {colors.map(color => (
-          <Swatch hex={color} key={color} />
+          <Swatch background={background} hex={color} key={color} />
         ))}
       </View>
     </Artboard>
