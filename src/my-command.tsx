@@ -8,6 +8,7 @@ const COLOR_LIST = [
   '#e4d7c4',
   '#9b7f62',
   '#8b6247',
+  '#e3b440',
   '#1f2224',
 ];
 
@@ -28,7 +29,7 @@ const HEADINGS = [
   },
 ];
 
-const BACKGROUND = COLOR_LIST[4];
+const BACKGROUND = COLOR_LIST[5];
 
 const BODY_FONT = { fontFamily: 'Red Hat Display', fontSize: 14 };
 
@@ -36,7 +37,7 @@ export default () => {
   render(
     <StyleTile
       background={BACKGROUND}
-      highlight={COLOR_LIST[2]}
+      highlight={COLOR_LIST[4]}
       colors={COLOR_LIST}
       headings={HEADINGS}
       bodyFont={BODY_FONT}

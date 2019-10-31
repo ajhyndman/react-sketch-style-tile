@@ -3,8 +3,10 @@ import { Artboard, View, Text, TextStyle } from 'react-sketchapp';
 
 import Swatch from './Swatch';
 import { textColor } from './utils';
+import Button from './Button';
+import Card from './Card';
 
-type TypefaceStyle = {
+export type TypefaceStyle = {
   fontFamily: string;
   fontSize: number;
   fontWeight?: string;
@@ -80,49 +82,37 @@ const StyleTile = ({
           bodyFont.fontWeight || 400
         ).toString()} ${bodyFont.fontSize.toString()}pt`}</Text>
 
-        {/* buttons */}
-        <View
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'space-around',
-            padding: 24,
-          }}
-        >
+        <View style={{ flexDirection: 'row' }}>
+          {/* buttons */}
           <View
             style={{
-              backgroundColor: highlight,
-              paddingVertical: 8,
-              paddingHorizontal: 16,
-              borderRadius: 100,
+              flexBasis: 0,
+              flexDirection: 'column',
+              flexGrow: 1,
+              justifyContent: 'space-around',
+              padding: 24,
             }}
           >
-            <Text
-              style={{
-                color: textColor(highlight),
-                fontFamily: bodyFont.fontFamily,
-                fontSize: 14,
-              }}
-            >
+            <Button background={highlight} fontFamily={bodyFont.fontFamily}>
               Primary Button
-            </Text>
+            </Button>
+            <Button background={colors[3]} fontFamily={bodyFont.fontFamily}>
+              Secondary Button
+            </Button>
           </View>
+
+          {/* cards */}
           <View
             style={{
-              backgroundColor: background,
-              paddingVertical: 8,
-              paddingHorizontal: 16,
-              borderRadius: 2,
+              alignItems: 'center',
+              flexBasis: 0,
+              flexDirection: 'column',
+              flexGrow: 1,
+              justifyContent: 'space-around',
+              padding: 24,
             }}
           >
-            <Text
-              style={{
-                color,
-                fontFamily: bodyFont.fontFamily,
-                fontSize: 14,
-              }}
-            >
-              Secondary Button
-            </Text>
+            <Card background={colors[0]} color={colors[5]} bodyFont={bodyFont} titleFont={headings[1]} />
           </View>
         </View>
       </View>
