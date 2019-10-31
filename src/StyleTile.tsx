@@ -15,6 +15,7 @@ export type TypefaceStyle = {
 interface StyleTileProps {
   background: string;
   highlight: string;
+  accent: string;
   colors: string[];
   headings: TypefaceStyle[];
   bodyFont: TypefaceStyle;
@@ -26,6 +27,7 @@ const BODY_LINE_HEIGHT = 1.4;
 const StyleTile = ({
   background,
   colors,
+  accent,
   headings,
   bodyFont,
   highlight,
@@ -96,7 +98,7 @@ const StyleTile = ({
             <Button background={highlight} fontFamily={bodyFont.fontFamily}>
               Primary Button
             </Button>
-            <Button background={colors[3]} fontFamily={bodyFont.fontFamily}>
+            <Button background={accent} fontFamily={bodyFont.fontFamily}>
               Secondary Button
             </Button>
           </View>
@@ -112,7 +114,7 @@ const StyleTile = ({
               padding: 24,
             }}
           >
-            <Card background={colors[0]} color={colors[5]} bodyFont={bodyFont} titleFont={headings[1]} />
+            <Card background={colors[4]} color={textColor(colors[4])} bodyFont={bodyFont} titleFont={headings[1]} />
           </View>
         </View>
       </View>

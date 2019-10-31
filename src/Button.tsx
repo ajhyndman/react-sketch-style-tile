@@ -13,7 +13,7 @@ const Button = ({ background, children, fontFamily }: Props) => (
     style={{
       alignItems: 'center',
       backgroundColor: background,
-      borderRadius: 1,
+      borderRadius: 2,
       flexDirection: 'row',
       height: 39,
       justifyContent: 'center',

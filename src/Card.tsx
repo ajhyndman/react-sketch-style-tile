@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Card = ({ background, color, bodyFont, titleFont }: Props) => (
-  <View style={{ backgroundColor: background, padding: 16, borderRadius: 1 }}>
+  <View style={{ backgroundColor: background, padding: 16, borderRadius: 2 }}>
     <View style={{ height: 75 }} />
     <Text style={{...titleFont, color}}>Card Title</Text>
     <Text style={{ ...bodyFont, color }}>

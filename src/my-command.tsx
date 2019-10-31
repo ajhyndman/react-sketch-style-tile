@@ -4,12 +4,12 @@ import { render } from 'react-sketchapp';
 import StyleTile from './StyleTile';
 
 const COLOR_LIST = [
-  '#eaeaea',
-  '#e4d7c4',
-  '#9b7f62',
-  '#8b6247',
-  '#e3b440',
-  '#1f2224',
+  '#ffffff',
+  '#DA98A1',
+  '#9567D3',
+  '#4D5679',
+  '#394466',
+  '#1A2037',
 ];
 
 const HEADINGS = [
@@ -37,7 +37,8 @@ export default () => {
   render(
     <StyleTile
       background={BACKGROUND}
-      highlight={COLOR_LIST[4]}
+      highlight={COLOR_LIST[2]}
+      accent={COLOR_LIST[3]}
       colors={COLOR_LIST}
       headings={HEADINGS}
       bodyFont={BODY_FONT}
