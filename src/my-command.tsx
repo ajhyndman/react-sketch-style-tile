@@ -3,31 +3,40 @@ import { render } from 'react-sketchapp';
 
 import StyleTile from './StyleTile';
 
-const COLOR_LIST = ['#F3F4F4', '#333', '#96DBE4', '#24828F', '#EFADA0'];
+const COLOR_LIST = [
+  '#eaeaea',
+  '#e4d7c4',
+  '#9b7f62',
+  '#8b6247',
+  '#1f2224',
+];
 
 const HEADINGS = [
   {
-    fontFamily: 'Cinzel',
+    // fontFamily: 'Montserrat',
+    // fontFamily: 'Cabin',
+    // fontFamily: 'Questrial',
+    fontFamily: 'Red Hat Display',
     fontSize: 32,
+    fontWeight: '600',
   },
   {
-    fontFamily: 'Cinzel',
+    fontFamily: 'Red Hat Display',
     fontSize: 24,
-  },
-  {
-    fontFamily: 'Cinzel',
-    fontSize: 16,
+    fontWeight: '600',
+    // textTransform: 'uppercase',
   },
 ];
 
-const BACKGROUND = '#EEE';
+const BACKGROUND = COLOR_LIST[4];
 
-const BODY_FONT = { fontFamily: 'American Typewriter', fontSize: 14 };
+const BODY_FONT = { fontFamily: 'Red Hat Display', fontSize: 14 };
 
 export default () => {
   render(
     <StyleTile
       background={BACKGROUND}
+      highlight={COLOR_LIST[2]}
       colors={COLOR_LIST}
       headings={HEADINGS}
       bodyFont={BODY_FONT}
