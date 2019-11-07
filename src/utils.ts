@@ -4,7 +4,7 @@ import chroma from 'chroma-js';
 export const textColor = (hex: string) => {
   const vsWhite = chroma.contrast(hex, 'white');
   if (vsWhite > 4) {
-    return '#eaeaea';
+    return '#fff';
   }
   // return chroma(hex)
   //   .darken(3)

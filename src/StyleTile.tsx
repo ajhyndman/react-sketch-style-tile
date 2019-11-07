@@ -45,7 +45,7 @@ const StyleTile = ({
         padding: 16,
       }}
     >
-      <View style={{ flexGrow: 1, flexShrink: 1 }}>
+      <View style={{ flexGrow: 1, flexShrink: 1, paddingRight: 16 }}>
         {headings.map((heading, i) => (
           <View
             style={{
@@ -111,7 +111,7 @@ const StyleTile = ({
               flexDirection: 'column',
               flexGrow: 1,
               justifyContent: 'space-around',
-              padding: 24,
+              padding: 16,
             }}
           >
             <Card background={colors[4]} color={textColor(colors[4])} bodyFont={bodyFont} titleFont={headings[1]} />

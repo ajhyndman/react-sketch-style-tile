@@ -5,39 +5,52 @@ import StyleTile from './StyleTile';
 
 const COLOR_LIST = [
   '#ffffff',
-  '#DA98A1',
-  '#9567D3',
+  // '#DA98A1',
+  // '#FFCD45',
+  '#FFD969',
+  // '#665830',
+  // '#9F8DC2',
+  // '#9567D3',
+  '#1A2037',
   '#4D5679',
   '#394466',
-  '#1A2037',
+  '#222B49',
 ];
 
 const HEADINGS = [
   {
-    // fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat',
     // fontFamily: 'Cabin',
     // fontFamily: 'Questrial',
-    fontFamily: 'Red Hat Display',
+    // fontFamily: 'Fredericka the Great',
     fontSize: 32,
+    // color: '#FFD969',
     fontWeight: '600',
   },
   {
-    fontFamily: 'Red Hat Display',
+    fontFamily: 'Montserrat',
     fontSize: 24,
     fontWeight: '600',
+    // color: '#FFD969',
     // textTransform: 'uppercase',
   },
 ];
 
 const BACKGROUND = COLOR_LIST[5];
 
-const BODY_FONT = { fontFamily: 'Red Hat Display', fontSize: 14 };
+const BODY_FONT = {
+  // fontFamily: 'Red Hat Display',
+  // fontFamily: 'Futura',
+  // fontFamily: 'Raleway',
+  fontFamily: 'Muli',
+  fontSize: 14,
+};
 
 export default () => {
   render(
     <StyleTile
       background={BACKGROUND}
-      highlight={COLOR_LIST[2]}
+      highlight={COLOR_LIST[1]}
       accent={COLOR_LIST[3]}
       colors={COLOR_LIST}
       headings={HEADINGS}
